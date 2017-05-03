@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">EasyPortfolio</string>
+    <string name="project_name">Project Name</string>
+    <string name="project_desc">Project description.</string>
 </resources>
