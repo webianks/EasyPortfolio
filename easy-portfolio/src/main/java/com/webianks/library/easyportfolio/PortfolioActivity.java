@@ -35,8 +35,13 @@ public class PortfolioActivity extends AppCompatActivity{
         project.setProjectName("Pollstap");
         project.setProjectDesc("Polling based social networking app.");
 
+        Project project2 = new Project();
+        project2.setProjectName("ScrollChoice");
+        project2.setProjectDesc("Create scrollable choice view in android.");
+
         List<Project> projectList = new ArrayList<>();
         projectList.add(project);
+        projectList.add(project2);
 
         ProjectsRecyclerAdapter projectsRecyclerAdapter = new ProjectsRecyclerAdapter(this,projectList);
         recyclerView.setAdapter(projectsRecyclerAdapter);
