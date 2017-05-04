@@ -4,32 +4,47 @@
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/projectName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:text="@string/project_name"
-        android:textStyle="bold" />
+    <RelativeLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
+        <ImageView
+            android:id="@+id/projectImage"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/cardview_dark_background" />
 
-    <TextView
-        android:id="@+id/projectDesc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/projectName"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:text="@string/project_desc" />
+        <TextView
+            android:id="@+id/projectName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_toRightOf="@id/projectImage"
+            android:text="@string/project_name"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/projectDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/projectName"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_toRightOf="@id/projectImage"
+            android:text="@string/project_desc" />
+
+    </RelativeLayout>
 
     <View
-        android:layout_below="@id/projectDesc"
         android:layout_width="match_parent"
         android:layout_height="1dp"
+        android:layout_below="@id/container"
         android:layout_margin="16dp"
-        android:background="@color/grey"
-        />
+        android:background="@color/grey" />
 
 </RelativeLayout>

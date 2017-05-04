@@ -18,7 +18,7 @@ public class ProjectsRecyclerAdapter extends RecyclerView.Adapter<ProjectsRecycl
     private Context context;
     private List<Project> projectsList;
 
-    public ProjectsRecyclerAdapter(Context context,List<Project> projectsList) {
+    ProjectsRecyclerAdapter(Context context,List<Project> projectsList) {
         this.context = context;
         this.projectsList = projectsList;
     }
