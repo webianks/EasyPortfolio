@@ -33,6 +33,7 @@
                 android:weightSum="3">
 
                 <FrameLayout
+                    android:id="@+id/githubContainer"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -49,6 +50,7 @@
 
 
                 <FrameLayout
+                    android:id="@+id/playStoreContainer"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -64,6 +66,7 @@
                 </FrameLayout>
 
                 <FrameLayout
+                    android:id="@+id/linkedInContainer"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
