@@ -5,6 +5,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.MenuItem;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,7 +14,7 @@ import java.util.List;
  * Created by R Ankit on 03-05-2017.
  */
 
-public class PortfolioActivity extends AppCompatActivity{
+public class PortfolioActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
 
@@ -26,6 +27,8 @@ public class PortfolioActivity extends AppCompatActivity{
     }
 
     private void init() {
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         recyclerView = (RecyclerView) findViewById(R.id.recyclerview);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
@@ -43,8 +46,17 @@ public class PortfolioActivity extends AppCompatActivity{
         projectList.add(project);
         projectList.add(project2);
 
-        ProjectsRecyclerAdapter projectsRecyclerAdapter = new ProjectsRecyclerAdapter(this,projectList);
+        ProjectsRecyclerAdapter projectsRecyclerAdapter = new ProjectsRecyclerAdapter(this, projectList);
         recyclerView.setAdapter(projectsRecyclerAdapter);
 
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        if (item.getItemId() == android.R.id.home)
+            finish();
+
+        return super.onOptionsItemSelected(item);
     }
 }

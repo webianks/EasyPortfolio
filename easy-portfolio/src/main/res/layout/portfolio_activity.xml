@@ -32,23 +32,51 @@
                 android:layout_margin="16dp"
                 android:weightSum="3">
 
-                <ImageView
+                <FrameLayout
                     android:layout_width="0dp"
-                    android:layout_height="60dp"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/github_logo" />
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:focusable="true">
 
-                <ImageView
-                    android:layout_width="0dp"
-                    android:layout_height="60dp"
-                    android:layout_weight="1"
-                    android:src="@drawable/playstore" />
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:src="@drawable/github_logo" />
 
-                <ImageView
+                </FrameLayout>
+
+
+                <FrameLayout
                     android:layout_width="0dp"
-                    android:layout_height="60dp"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:src="@drawable/linkedin_logo" />
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:src="@drawable/playstore" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="?selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:src="@drawable/linkedin_logo" />
+
+                </FrameLayout>
 
             </LinearLayout>
 
