@@ -19,7 +19,7 @@ import java.util.List;
  * Created by R Ankit on 03-05-2017.
  */
 
-public class PortfolioActivity extends AppCompatActivity implements View.OnClickListener {
+public class PortfolioActivity extends AppCompatActivity implements View.OnClickListener, ProjectsRecyclerAdapter.ItemClickListener {
 
     private RecyclerView recyclerView;
     private FrameLayout githubContainer;
@@ -75,6 +75,7 @@ public class PortfolioActivity extends AppCompatActivity implements View.OnClick
 
         ProjectsRecyclerAdapter projectsRecyclerAdapter = new ProjectsRecyclerAdapter(this, projectList);
         recyclerView.setAdapter(projectsRecyclerAdapter);
+        projectsRecyclerAdapter.setOnItemClickListener(this);
 
     }
 
@@ -108,5 +109,10 @@ public class PortfolioActivity extends AppCompatActivity implements View.OnClick
         CustomTabsIntent customTabsIntent = builder.build();
         customTabsIntent.launchUrl(this, Uri.parse(link));
 
+    }
+
+    @Override
+    public void itemClicked(String url) {
+        openLink(url);
     }
 }
