@@ -5,4 +5,11 @@ package com.webianks.library.easyportfolio;
  */
 
 public class EasyPortfolio {
+
+    public EasyPortfolio(Builder builder) {
+
+    }
+    public static class Builder {
+
+    }
 }
