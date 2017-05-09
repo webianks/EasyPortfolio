@@ -3,5 +3,6 @@
     <string name="project_name">Project Name</string>
     <string name="project_desc">Project description.</string>
     <string name="portfolio">Portfolio</string>
-    <string name="connections">Profiles</string>
+    <string name="connections">Developer Profiles</string>
+    <string name="projects">Projects</string>
 </resources>

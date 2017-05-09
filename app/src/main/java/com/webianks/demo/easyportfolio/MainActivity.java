@@ -23,12 +23,19 @@ public class MainActivity extends AppCompatActivity {
 
         List<Project> projectList = new ArrayList<>();
 
-        Project pollstapProject = new Project();
-        pollstapProject.setProjectName("PollsTap");
-        pollstapProject.setProjectDesc("Polling based social networking app.");
-        pollstapProject.setProjectLink("http://webianks.com");
+        Project pollstap = new Project();
+        pollstap.setProjectName("PollsTap");
+        pollstap.setProjectDesc("Polling based social networking app." +
+                " You can start new polls and reach a conclusion based on the voting.");
+        pollstap.setProjectLink("https://play.google.com/store/apps/details?id=com.webianks.pollstap");
 
-        projectList.add(pollstapProject);
+        Project popupBubble = new Project();
+        popupBubble.setProjectName("PopupBubble");
+        popupBubble.setProjectDesc("Easily add and customise \"New Post\" popup button with the feeds (RecyclerView) of your app.");
+        popupBubble.setProjectLink("https://github.com/webianks/PopupBubble");
+
+        projectList.add(pollstap);
+        projectList.add(popupBubble);
 
 
         new EasyPortfolio.Builder(this)
