@@ -30,7 +30,6 @@ public class PortfolioActivity extends AppCompatActivity implements View.OnClick
     private String github_link;
     private String play_store_link;
     private String linked_in_link;
-    private List<Project> projectList;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -45,7 +44,7 @@ public class PortfolioActivity extends AppCompatActivity implements View.OnClick
     private void getProjectsList() {
 
         Intent i = getIntent();
-        projectList = (List<Project>) i.getSerializableExtra("project_list");
+        List<Project> projectList = (List<Project>) i.getSerializableExtra("project_list");
         ProjectsRecyclerAdapter projectsRecyclerAdapter = new ProjectsRecyclerAdapter(this, projectList);
         recyclerView.setAdapter(projectsRecyclerAdapter);
         projectsRecyclerAdapter.setOnItemClickListener(this);

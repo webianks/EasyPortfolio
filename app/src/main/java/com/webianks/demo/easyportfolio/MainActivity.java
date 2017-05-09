@@ -40,8 +40,8 @@ public class MainActivity extends AppCompatActivity {
 
         new EasyPortfolio.Builder(this)
                 .withGithubUrl("http://www.github.com/webianks")
-                .withPlayStoreUrl("http://www.github.com/webianks")
-                .withLinkedInUrl("http://www.github.com/webianks")
+                .withPlayStoreUrl("https://play.google.com/store/apps/dev?id=5406110317606112331")
+                .withLinkedInUrl("https://www.linkedin.com/in/ramankit-singh-b7b09493/")
                 .withProjectList(projectList)
                 .build()
                 .start();
