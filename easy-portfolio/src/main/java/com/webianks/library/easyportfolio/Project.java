@@ -1,10 +1,13 @@
 package com.webianks.library.easyportfolio;
 
+
+import java.io.Serializable;
+
 /**
  * Created by R Ankit on 03-05-2017.
  */
 
-public class Project {
+public class Project implements Serializable {
 
     private String projectName;
     private String projectDesc;
@@ -23,7 +26,7 @@ public class Project {
         this.projectName = projectName;
     }
 
-    public String getProjectDesc() {
+    String getProjectDesc() {
         return projectDesc;
     }
 
@@ -31,7 +34,8 @@ public class Project {
         return projectLink;
     }
 
-    public String getProjectName() {
+    String getProjectName() {
         return projectName;
     }
+
 }

@@ -67,7 +67,7 @@ public class ProjectsRecyclerAdapter extends RecyclerView.Adapter<ProjectsRecycl
                 public void onClick(View view) {
 
                     if (itemClickListener != null)
-                        itemClickListener.itemClicked("http://webianks.com");
+                        itemClickListener.itemClicked(projectsList.get(getAdapterPosition()).getProjectLink());
                 }
             });
 

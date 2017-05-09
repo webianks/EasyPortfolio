@@ -1,5 +1,6 @@
 package com.webianks.library.easyportfolio;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -13,7 +14,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.FrameLayout;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -30,6 +30,7 @@ public class PortfolioActivity extends AppCompatActivity implements View.OnClick
     private String github_link;
     private String play_store_link;
     private String linked_in_link;
+    private List<Project> projectList;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -38,6 +39,16 @@ public class PortfolioActivity extends AppCompatActivity implements View.OnClick
 
         init();
         initSocialLinks();
+        getProjectsList();
+    }
+
+    private void getProjectsList() {
+
+        Intent i = getIntent();
+        projectList = (List<Project>) i.getSerializableExtra("project_list");
+        ProjectsRecyclerAdapter projectsRecyclerAdapter = new ProjectsRecyclerAdapter(this, projectList);
+        recyclerView.setAdapter(projectsRecyclerAdapter);
+        projectsRecyclerAdapter.setOnItemClickListener(this);
     }
 
     private void initSocialLinks() {
@@ -85,22 +96,6 @@ public class PortfolioActivity extends AppCompatActivity implements View.OnClick
         githubContainer.setOnClickListener(this);
         playStoreContainer.setOnClickListener(this);
         linkedInContainer.setOnClickListener(this);
-
-        Project project = new Project();
-        project.setProjectName("Pollstap");
-        project.setProjectDesc("Polling based social networking app.");
-
-        Project project2 = new Project();
-        project2.setProjectName("ScrollChoice");
-        project2.setProjectDesc("Create scrollable choice view in android.");
-
-        List<Project> projectList = new ArrayList<>();
-        projectList.add(project);
-        projectList.add(project2);
-
-        ProjectsRecyclerAdapter projectsRecyclerAdapter = new ProjectsRecyclerAdapter(this, projectList);
-        recyclerView.setAdapter(projectsRecyclerAdapter);
-        projectsRecyclerAdapter.setOnItemClickListener(this);
 
     }
 
