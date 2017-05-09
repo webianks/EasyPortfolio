@@ -6,6 +6,7 @@ import android.support.annotation.Nullable;
 import android.support.customtabs.CustomTabsIntent;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.MenuItem;
@@ -25,6 +26,7 @@ public class PortfolioActivity extends AppCompatActivity implements View.OnClick
     private FrameLayout githubContainer;
     private FrameLayout playStoreContainer;
     private FrameLayout linkedInContainer;
+    private CardView socialContainer;
     private String github_link;
     private String play_store_link;
     private String linked_in_link;
@@ -39,9 +41,31 @@ public class PortfolioActivity extends AppCompatActivity implements View.OnClick
     }
 
     private void initSocialLinks() {
-        github_link = "http://www.github.com/webianks";
-        play_store_link = "http://www.github.com/webianks";
-        linked_in_link = "http://www.github.com/webianks";
+
+        github_link = getIntent().getStringExtra("github_url");
+        play_store_link = getIntent().getStringExtra("play_store_url");
+        linked_in_link = getIntent().getStringExtra("linkedin_url");
+
+        int count = 0;
+
+        if (github_link == null) {
+            count++;
+            githubContainer.setVisibility(View.GONE);
+        }
+
+        if (play_store_link == null) {
+            count++;
+            playStoreContainer.setVisibility(View.GONE);
+        }
+
+        if (linked_in_link == null) {
+            count++;
+            linkedInContainer.setVisibility(View.GONE);
+        }
+
+        if (count == 3)
+            socialContainer.setVisibility(View.GONE);
+
     }
 
     private void init() {
@@ -56,6 +80,7 @@ public class PortfolioActivity extends AppCompatActivity implements View.OnClick
         githubContainer = (FrameLayout) findViewById(R.id.githubContainer);
         playStoreContainer = (FrameLayout) findViewById(R.id.playStoreContainer);
         linkedInContainer = (FrameLayout) findViewById(R.id.linkedInContainer);
+        socialContainer = (CardView) findViewById(R.id.socialContainer);
 
         githubContainer.setOnClickListener(this);
         playStoreContainer.setOnClickListener(this);

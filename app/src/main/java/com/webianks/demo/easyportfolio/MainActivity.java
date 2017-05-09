@@ -1,11 +1,10 @@
 package com.webianks.demo.easyportfolio;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-import com.webianks.library.easyportfolio.PortfolioActivity;
+import com.webianks.library.easyportfolio.EasyPortfolio;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -18,6 +17,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void onClickPortfolio(View view) {
 
-        startActivity(new Intent(this, PortfolioActivity.class));
+        new EasyPortfolio.Builder(this)
+                .withGithubUrl("http://www.github.com/webianks")
+                .build()
+                .start();
     }
 }
