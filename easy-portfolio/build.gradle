@@ -1,5 +1,29 @@
 apply plugin: 'com.android.library'
 
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'easy-portfolio'
+
+    publishedGroupId = 'com.webianks.library'
+    libraryName = 'easy-portfolio'
+    artifact = 'easy-portfolio'
+
+    libraryDescription = 'Easily add Portfolio Activity in your android app.'
+
+    siteUrl = 'https://github.com/webianks/EasyPortfolio'
+    gitUrl = 'https://github.com/webianks/EasyPortfolio.git'
+
+    libraryVersion = '1.0.0'
+
+    developerId = 'webianks'
+    developerName = 'Ramankit Singh'
+    developerEmail = 'webianks@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
@@ -27,3 +51,6 @@ dependencies {
     compile 'com.android.support:cardview-v7:25.3.1'
     compile 'com.android.support:customtabs:25.3.1'
 }
+
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
