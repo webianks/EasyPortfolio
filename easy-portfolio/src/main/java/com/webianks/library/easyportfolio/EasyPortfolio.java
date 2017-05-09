@@ -14,8 +14,11 @@ public class EasyPortfolio {
     private String play_store_url;
     private String linkedin_url;
 
-    public EasyPortfolio(Builder builder) {
-
+    EasyPortfolio(Builder builder) {
+        context = builder.context;
+        github_url = builder.github_url;
+        play_store_url = builder.play_store_url;
+        linkedin_url = builder.linkedin_url;
     }
 
     public static class Builder {
@@ -61,7 +64,6 @@ public class EasyPortfolio {
         context.startActivity(intent);
 
     }
-
 
 
 }
