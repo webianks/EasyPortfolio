@@ -4,6 +4,24 @@ So you have developed full Application, Now the part comes when you are required
 <img src="https://github.com/webianks/EasyPortfolio/blob/master/screen.png" height="700" width="400" >
 
 
+# Download
+
+**Gradle**
+
+```groovy
+compile 'com.webianks.library:easy-portfolio:1.0.0'
+```
+**Maven**
+
+```xml
+<dependency>
+  <groupId>com.webianks.library</groupId>
+  <artifactId>easy-portfolio</artifactId>
+  <version>1.0.0</version>
+  <type>pom</type>
+</dependency>
+```
+
 # License
 
 ```
