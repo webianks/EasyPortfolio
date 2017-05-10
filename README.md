@@ -22,6 +22,48 @@ compile 'com.webianks.library:easy-portfolio:1.0.0'
 </dependency>
 ```
 
+# Usage
+
+Use these block of code inside the onClick method of the Activity/Fragment from where you want to open the PortfolioActivity.
+
+Step 1:
+
+First of all create a list of projects by adding ProjectName, ProjectDescription and ProjectLink and mind that you should use the <b>Project</b> as a type of list.
+
+```
+ List<Project> projectList = new ArrayList<>();
+
+ Project pollstap = new Project();
+ pollstap.setProjectName("PollsTap");
+ pollstap.setProjectDesc("Polling based social networking app." +
+                " You can start new polls and reach a conclusion based on the voting.");
+ pollstap.setProjectLink("https://play.google.com/store/apps/details?id=com.webianks.pollstap");
+
+ Project popupBubble = new Project();
+ popupBubble.setProjectName("PopupBubble");
+ popupBubble.setProjectDesc("Easily add and customise \"New Post\" popup button with the feeds (RecyclerView) of your app.");
+ popupBubble.setProjectLink("https://github.com/webianks/PopupBubble");
+
+ projectList.add(pollstap);
+ projectList.add(popupBubble);
+
+```
+
+Step 2:
+
+Pass this 'projectList' to the 'withProjectList()' method and build and start to launch the activity.
+
+```java
+
+    new EasyPortfolio.Builder(this)
+          .withGithubUrl("http://www.github.com/webianks")
+          .withPlayStoreUrl("https://play.google.com/store/apps/dev?id=5406110317606112331")
+          .withLinkedInUrl("https://www.linkedin.com/in/ramankit-singh-b7b09493/")
+          .withProjectList(projectList)
+          .build()
+          .start();
+```
+
 # License
 
 ```
