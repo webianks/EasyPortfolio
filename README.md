@@ -51,7 +51,7 @@ First of all create a list of projects by adding ProjectName, ProjectDescription
 
 Step 2:
 
-Pass this 'projectList' to the 'withProjectList()' method and build and start to launch the activity.
+Pass this 'projectList' to the 'withProjectList()' method then build and start to launch the activity.
 
 ```java
 
