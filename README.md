@@ -1,6 +1,9 @@
 # EasyPortfolio
 So you have developed full Application, Now the part comes when you are required to showcase your awesome projects but you feel terrible for creating something boilerplate. Now don't feel just write couple of lines about your projects and provide link to those projects and bamm you get the PortfolioActivity. 
 
+<img src="https://github.com/webianks/EasyPortfolio/blob/master/screen.png" height="700" width="400" >
+
+
 # License
 
 ```
