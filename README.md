@@ -1,3 +1,5 @@
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-EasyPortfolio-red.svg?style=flat-square)](https://android-arsenal.com/details/1/5737)
+
 # EasyPortfolio
 So you have developed full Application, Now the part comes when you are required to showcase your awesome projects but you feel terrible for creating something boilerplate. Now don't feel just write couple of lines about your projects and provide link to those projects and bamm you get the PortfolioActivity. 
 
